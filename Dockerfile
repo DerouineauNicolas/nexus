@@ -40,7 +40,6 @@ RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
 
 RUN git clone https://github.com/cnr-isti-vclab/nexus /usr/src/app/
-RUN git clone https://github.com/cnr-isti-vclab/vcglib /usr/src/app/vcglib
-RUN git clone https://github.com/cnr-isti-vclab/corto /usr/src/app/corto
+RUN git clone https://github.com/cnr-isti-vclab/vcglib /usr/src/vcglib
+RUN git clone https://github.com/cnr-isti-vclab/corto /usr/src/corto
 RUN mkdir build
-#RUN cd build && cmake .. && make 

@@ -64,7 +64,7 @@ set(CMAKE_AUTOUIC ON)
 
 add_definitions( -DGL_COMPATIBILITY )
 
-include_directories(../../../vcglib ../../../vcglib/eigenlib)
+include_directories(../../../vcglib ../../../vcglib/eigenlib ../../../corto)
 
 find_package(Qt5Widgets)
 find_package(Qt5OpenGL)

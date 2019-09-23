@@ -5,7 +5,7 @@ project(nxsedit)
 
 set (CMAKE_CXX_STANDARD 11)
 
-include_directories(../../../vcglib ../../../vcglib/eigenlib)
+include_directories(../../../vcglib ../../../vcglib/eigenlib ../../../corto)
 
 
 SET(HEADERS
