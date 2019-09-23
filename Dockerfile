@@ -1,6 +1,7 @@
 FROM ubuntu:18.04
 RUN apt-get update 
-RUN  apt-get install -y --no-install-recommends ca-certificates cmake git build-essential 
+RUN  apt-get install -y --no-install-recommends ca-certificates cmake git libcurl4-openssl-dev \
+      build-essential libxmu-dev libxi-dev libgl-dev libglew-dev
 
 RUN apt-get install -y  \
         libqt5concurrent5 \
@@ -35,11 +36,16 @@ RUN apt-get install -y  \
         qttools5-dev
 
 
+
+
+RUN git clone https://github.com/cnr-isti-vclab/vcglib /usr/src/vcglib
+RUN git clone https://github.com/cnr-isti-vclab/corto /usr/src/corto
+RUN cd /usr/src/corto && mkdir build && cd build && cmake .. && make && make install
+
+
 RUN mkdir /usr/src/app
 
 WORKDIR /usr/src/app
+RUN git clone https://github.com/DerouineauNicolas/nexus /usr/src/app/
 
-RUN git clone https://github.com/cnr-isti-vclab/nexus /usr/src/app/
-RUN git clone https://github.com/cnr-isti-vclab/vcglib /usr/src/vcglib
-RUN git clone https://github.com/cnr-isti-vclab/corto /usr/src/corto
-RUN mkdir build
+RUN mkdir build && cd build && cmake .. && make -j 2
