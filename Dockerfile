@@ -35,9 +35,6 @@ RUN apt-get install -y  \
         qttools5-dev-tools \
         qttools5-dev
 
-
-
-
 RUN git clone https://github.com/cnr-isti-vclab/vcglib /usr/src/vcglib
 RUN git clone https://github.com/cnr-isti-vclab/corto /usr/src/corto
 RUN cd /usr/src/corto && mkdir build && cd build && cmake .. && make && make install
@@ -49,3 +46,4 @@ WORKDIR /usr/src/app
 RUN git clone https://github.com/DerouineauNicolas/nexus /usr/src/app/
 
 RUN mkdir build && cd build && cmake .. && make -j 2
+ENV PATH /usr/src/app/build/src/nxsbuild:/usr/src/app/build/src/nxsedit:$PATH

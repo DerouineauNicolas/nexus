@@ -25,9 +25,19 @@ gargo.ply --> **nxsbuild** --> gargo.nxs --> **nxscompress.exe** --> gargo.nxz
 
 Drag and drop either .nxs or .nxz files on **nxsview** to interactively inspect the generated 3D multiresolution model.
 
+
+### Docker images 
+
+    docker build -t nexus .
+
+
 -----------------------------------------------------------------------------------------
 
 ### Create the .nxs model
+
+Go in the docker container:
+
+	docker run -ti -v /Users/nicolasderouineau/Documents/mesh/:/Users/nicolasderouineau/Documents/mesh/ nexus bash
 
 Use [nxsbuild](doc/nxsbuild.md) to create a multiresolution nexus model (.nxs) out of your 3D model (.ply):
 
