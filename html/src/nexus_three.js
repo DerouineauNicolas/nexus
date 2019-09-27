@@ -22,7 +22,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-function NexusObject(url, onLoad, onUpdate, renderer, material) {
+var THREE = require('three');
+import './nexus';
+
+export function NexusObject(url, onLoad, onUpdate, renderer, material) {
 	if(onload !== null && typeof(onLoad) == 'object')
 		throw "NexusObject constructor has been changed.";
 

@@ -1,0 +1,29 @@
+{
+  "name": "nexus",
+  "version": "4.2.1",
+  "description": "javascript library for creation and visualization of a batched multiresolution mesh ",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "node_modules/.bin/webpack-dev-server --config webpack.config.js --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cnr-isti-vclab/nexus.git"
+  },
+  "author": "federico.ponchio@isti.cnr.it",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cnr-isti-vclab/nexus/issues"
+  },
+  "homepage": "https://github.com/cnr-isti-vclab/nexus#readme",
+  "devDependencies": {
+    "three": "^0.108.0",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
+  }
+}
